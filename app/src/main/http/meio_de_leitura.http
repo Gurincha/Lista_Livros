@@ -1,0 +1,24 @@
+@baseurl = https://8080-Gurincha-springwikiap-d7karjvwtxc.ws-us114.gitpod.io
+
+###
+GET {{baseurl}}/meio_de_leitura
+
+###
+POST {{baseurl}}/meio_de_leitura
+Content-Type: application/json
+
+{
+    "meio_de_leitura": "Livro Fisico",
+}
+
+###
+PUT {{baseurl}}/meio_de_leitura/2
+Content-Type: application/json
+
+{
+    "meio_de_leitura": "Livro Digital",
+
+}
+
+###
+DELETE {{baseurl}}/meio_de_leitura/2
