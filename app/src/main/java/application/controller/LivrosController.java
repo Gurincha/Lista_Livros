@@ -56,7 +56,7 @@ public class LivrosController {
         result.get().setTitulo(livros.getTitulo());
         result.get().setGenero(livros.getGenero());
         result.get().setEditora(livros.getEditora());
-        result.get().setData_de_Lancamento;(livros.getData_de_Lancamento());
+        result.get().setData_de_Lancamento(livros.getData_de_Lancamento());
         return livrosRepo.save(result.get());
 
     }

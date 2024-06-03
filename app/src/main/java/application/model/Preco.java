@@ -14,6 +14,7 @@ public class Preco {
 
     private long id;
     private String Local_de_Compra;
+    private float Preco;
     public long getId() {
         return id;
     }
@@ -26,6 +27,11 @@ public class Preco {
     public void setLocal_de_Compra(String local_de_Compra) {
         Local_de_Compra = local_de_Compra;
     }
-    
+    public float getPreco() {
+        return Preco;
+    }
+    public void setPreco(float preco) {
+        Preco = preco;
+    }     
 
 }

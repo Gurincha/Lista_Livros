@@ -1,4 +1,4 @@
-@baseurl = https://8080-Gurincha-springwikiap-d7karjvwtxc.ws-us114.gitpod.io
+@baseurl = https://8080-gurincha-listalivros-2u594r7a9c4.ws-us114.gitpod.io
 
 ###
 GET {{baseurl}}/livros
@@ -14,7 +14,7 @@ Content-Type: application/json
     "categoria": {"id": 1}
 }
 ###
-PUT {{baseurl}}/livros/2
+POST {{baseurl}}/livros
 Content-Type: application/json
 
 {
@@ -24,7 +24,7 @@ Content-Type: application/json
     "categoria": {"id": 1}
 }
 ###
-PUT {{baseurl}}/livros/3
+POST {{baseurl}}/livros
 Content-Type: application/json
 
 {
@@ -34,6 +34,5 @@ Content-Type: application/json
     "categoria": {"id": 1}
 }
 
-DELETE https://8080-Gurincha-springwikiap-d7karjvwtxc.ws-us114.gitpod.io/obras/3
-
 ###
+DELETE https://8080-Gurincha-springwikiap-d7karjvwtxc.ws-us114.gitpod.io/obras/3

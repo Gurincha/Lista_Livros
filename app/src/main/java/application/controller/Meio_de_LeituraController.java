@@ -24,12 +24,12 @@ public class Meio_de_LeituraController {
 
     @GetMapping
     public Iterable<Meio_de_Leitura> getall(){
-        return meio_de_leituraRepoRepo.findAll();
+        return meio_de_leituraRepo.findAll();
     }
 
     @GetMapping("/{id}")
     public Meio_de_Leitura getOne(@PathVariable long id){
-        Optional<Meio_de_Leitura> result = meio_de_leituraRepoRepo.findById(id);
+        Optional<Meio_de_Leitura> result = meio_de_leituraRepo.findById(id);
         if (result.isEmpty()){
             throw new ResponseStatusException(
                 HttpStatus.NOT_FOUND,"Meio de Leitura não encontrada"
@@ -39,13 +39,13 @@ public class Meio_de_LeituraController {
     }
 
     @PostMapping
-    private Meio_de_Leitura post(@RequestBody Meio_de_Leitura meio_de_leituraRepo){
-        return meio_de_leituraRepoRepo.save(meio_de_leituraRepo);
+    private Meio_de_Leitura post(@RequestBody Meio_de_Leitura meio_de_leitura){
+        return meio_de_leituraRepo.save(meio_de_leitura);
     }
 
     @PutMapping("/{id}")
-    private Meio_de_Leitura put(@RequestBody Meio_de_Leitura meio_de_leituraRepo, @PathVariable long id){
-        Optional<Meio_de_Leitura> result = meio_de_leituraRepoRepo.findById(id);
+    private Meio_de_Leitura put(@RequestBody Meio_de_Leitura meio_de_leitura, @PathVariable long id){
+        Optional<Meio_de_Leitura> result = meio_de_leituraRepo.findById(id);
         
         if (result.isEmpty()){
             throw new ResponseStatusException(
@@ -53,15 +53,15 @@ public class Meio_de_LeituraController {
             );
         }
         
-        result.get().setMeio_de_Leitura(meio_de_leituraRepo.getMeio_de_Leitura());
-        return meio_de_leituraRepoRepo.save(result.get());
+        result.get().setMeio_de_Leitura(meio_de_leitura.getMeio_de_Leitura());
+        return meio_de_leituraRepo.save(result.get());
 
     }
 
     @DeleteMapping("/{id}")
     private void delete(@PathVariable long id){
-        if(meio_de_leituraRepoRepo.existsById(id)){
-            meio_de_leituraRepoRepo.deleteById(id);
+        if(meio_de_leituraRepo.existsById(id)){
+            meio_de_leituraRepo.deleteById(id);
         } else {
             throw new ResponseStatusException(
                 HttpStatus.NOT_FOUND,"Meio de Leitura não encontrada"

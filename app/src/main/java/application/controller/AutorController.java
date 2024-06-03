@@ -53,7 +53,6 @@ public class AutorController {
             );
         }
         
-        result.get().setAutor(autor.getAutor());
         result.get().setNome(autor.getNome());
         result.get().setNacionalidade(autor.getNacionalidade());
         return autorRepo.save(result.get());
